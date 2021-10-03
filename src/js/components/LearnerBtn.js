@@ -8,17 +8,17 @@ function LearnerBtn(props) {
 
   return (
     <Row>
-        <Col>
+        <Col className="text-center">
             <button className="learner-btn" >
                 <Image src={brownie} roundedCircle />
             </button>
         </Col>
-        <Col>
+        <Col className="text-center">
             <button className="learner-btn" >
                 <Image src={zelda} roundedCircle />
             </button>
         </Col>
-        <Col>
+        <Col className="text-center">
             <button className="learner-btn" >
                 <Image src={parents} roundedCircle />
             </button>
