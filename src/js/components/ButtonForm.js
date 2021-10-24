@@ -32,7 +32,8 @@ class ConnectedForm extends Component {
   render() {
     const { title } = this.state;
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit} className="py-5" >
+        <h2>Add a new button</h2>
         <Form.Group className="mb-3 mt-3" controlId="formBasicEmail">
           <Form.Label>Button Label</Form.Label>
           <Form.Control 

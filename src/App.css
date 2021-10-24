@@ -12,10 +12,10 @@ html {
 }
 
 .learner-btn {
-  height: 152px;
-  width: 152px;
-  border-radius: 100%;
-  background-color: #34d2eb;
+  height: 154px;
+  width: 154px;
+  border-radius: 5px;
+  background-color: #ff997c;
   border: none;
   padding: 0;
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import List from "./List";
-import ButtonForm from "./ButtonForm";
-import '../../App.css';
+import '../../App.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../Custom.scss';
 import LearnerBtn from "./LearnerBtn";
 import NavigationBar from "./NavigationBar";
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
@@ -25,8 +25,7 @@ const App = () => (
       <List />
     </Row>
     <Row className="py-5">
-      <h2>Add a new button</h2>
-      <ButtonForm />
+      {/* <ButtonForm /> */}
     </Row>
   </Container>
 );
