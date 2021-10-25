@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-fluentbuttonsapp-staging-230803-authRole",
+      "UnauthRoleArn": "arn:aws:iam::770950757527:role/amplify-fluentbuttonsapp-staging-230803-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::770950757527:role/amplify-fluentbuttonsapp-staging-230803-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-fluentbuttonsapp-staging-230803-deployment",
+      "UnauthRoleName": "amplify-fluentbuttonsapp-staging-230803-unauthRole",
+      "StackName": "amplify-fluentbuttonsapp-staging-230803",
+      "StackId": "arn:aws:cloudformation:us-west-2:770950757527:stack/amplify-fluentbuttonsapp-staging-230803/3e142a50-351f-11ec-9d68-062b9e495a35",
+      "AmplifyAppId": "d2p07unix8ctd5"
+    }
+  }
+}
