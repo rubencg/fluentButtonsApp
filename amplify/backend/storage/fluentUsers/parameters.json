@@ -1,0 +1,5 @@
+{
+    "tableName": "fluentUsers",
+    "partitionKeyName": "name",
+    "partitionKeyType": "S"
+}
