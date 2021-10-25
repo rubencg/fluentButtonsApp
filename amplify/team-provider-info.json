@@ -10,6 +10,14 @@
       "StackName": "amplify-fluentbuttonsapp-staging-230803",
       "StackId": "arn:aws:cloudformation:us-west-2:770950757527:stack/amplify-fluentbuttonsapp-staging-230803/3e142a50-351f-11ec-9d68-062b9e495a35",
       "AmplifyAppId": "d2p07unix8ctd5"
+    },
+    "categories": {
+      "function": {
+        "usersFunction": {
+          "deploymentBucketName": "amplify-fluentbuttonsapp-staging-230803-deployment",
+          "s3Key": "amplify-builds/usersFunction-4d2b72414a746953572b-build.zip"
+        }
+      }
     }
   }
 }
