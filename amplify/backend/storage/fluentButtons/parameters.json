@@ -1,0 +1,5 @@
+{
+    "tableName": "fluentButtons",
+    "partitionKeyName": "name",
+    "partitionKeyType": "S"
+}

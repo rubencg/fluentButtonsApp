@@ -1,35 +1,55 @@
 {
-  "paths": [
-    {
-      "name": "/users",
-      "lambdaFunction": "usersFunction",
-      "privacy": {
-        "open": true
-      },
-      "policyResourceName": "/users"
-    }
-  ],
-  "resourceName": "fluentapi",
-  "apiName": "fluentapi",
-  "functionArns": [
-    {
-      "lambdaFunction": "usersFunction"
-    }
-  ],
-  "privacy": {
-    "auth": 0,
-    "unauth": 0,
-    "authRoleName": "amplify-fluentbuttonsapp-staging-230803-authRole",
-    "unAuthRoleName": "amplify-fluentbuttonsapp-staging-230803-unauthRole"
-  },
-  "dependsOn": [
-    {
-      "category": "function",
-      "resourceName": "usersFunction",
-      "attributes": [
-        "Name",
-        "Arn"
-      ]
-    }
-  ]
+    "paths": [
+        {
+            "name": "/users",
+            "lambdaFunction": "usersFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/users"
+        },
+        {
+            "name": "/buttons",
+            "lambdaFunction": "buttonsFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/buttons"
+        }
+    ],
+    "resourceName": "fluentapi",
+    "apiName": "fluentapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "usersFunction"
+        },
+        {
+            "lambdaFunction": "buttonsFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-fluentbuttonsapp-staging-230803-authRole",
+        "unAuthRoleName": "amplify-fluentbuttonsapp-staging-230803-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "usersFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "buttonsFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "781232ee"
 }
