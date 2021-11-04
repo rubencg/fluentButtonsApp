@@ -11,12 +11,36 @@
             "Name",
             "Arn"
           ]
+        },
+        {
+          "category": "function",
+          "resourceName": "buttonsFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "buttonClicksFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
         }
       ]
     }
   },
   "storage": {
     "fluentUsers": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "fluentButtons": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "buttonClicks": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation"
     }
@@ -30,6 +54,44 @@
         {
           "category": "storage",
           "resourceName": "fluentUsers",
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "attributeEnvMap": {
+            "Name": "TABLE_NAME",
+            "Arn": "TABLE_ARN"
+          }
+        }
+      ]
+    },
+    "buttonsFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "fluentButtons",
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "attributeEnvMap": {
+            "Name": "TABLE_NAME",
+            "Arn": "TABLE_ARN"
+          }
+        }
+      ]
+    },
+    "buttonClicksFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "buttonClicks",
           "attributes": [
             "Name",
             "Arn"

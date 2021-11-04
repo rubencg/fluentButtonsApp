@@ -1,35 +1,74 @@
 {
-  "paths": [
-    {
-      "name": "/users",
-      "lambdaFunction": "usersFunction",
-      "privacy": {
-        "open": true
-      },
-      "policyResourceName": "/users"
-    }
-  ],
-  "resourceName": "fluentapi",
-  "apiName": "fluentapi",
-  "functionArns": [
-    {
-      "lambdaFunction": "usersFunction"
-    }
-  ],
-  "privacy": {
-    "auth": 0,
-    "unauth": 0,
-    "authRoleName": "amplify-fluentbuttonsapp-staging-230803-authRole",
-    "unAuthRoleName": "amplify-fluentbuttonsapp-staging-230803-unauthRole"
-  },
-  "dependsOn": [
-    {
-      "category": "function",
-      "resourceName": "usersFunction",
-      "attributes": [
-        "Name",
-        "Arn"
-      ]
-    }
-  ]
+    "paths": [
+        {
+            "name": "/users",
+            "lambdaFunction": "usersFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/users"
+        },
+        {
+            "name": "/buttons",
+            "lambdaFunction": "buttonsFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/buttons"
+        },
+        {
+            "name": "/buttonClicks",
+            "lambdaFunction": "buttonClicksFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/buttonClicks"
+        }
+    ],
+    "resourceName": "fluentapi",
+    "apiName": "fluentapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "usersFunction"
+        },
+        {
+            "lambdaFunction": "buttonsFunction"
+        },
+        {
+            "lambdaFunction": "buttonClicksFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-fluentbuttonsapp-staging-230803-authRole",
+        "unAuthRoleName": "amplify-fluentbuttonsapp-staging-230803-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "usersFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "buttonsFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "buttonClicksFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "218386a2"
 }

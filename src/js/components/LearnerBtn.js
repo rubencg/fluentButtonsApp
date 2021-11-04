@@ -11,9 +11,12 @@ function getUsersData() {
     return API.get(apiName, path, myInit);
 }
 
-function LearnerBtn(props) {
+function LearnerBtn({onPersonClick}) {
     const [loading, setLoading] = useState(true);
     const [users, setUsers] = useState([]);
+    const handlePersonClick = (name) => {
+        onPersonClick(name);
+    };
 
     useEffect(() => {
         getUsersData().then(response => {
@@ -24,13 +27,12 @@ function LearnerBtn(props) {
         });
     }, []);
 
-    return loading ? <></> : (
+    return loading ? <>Cargando personas...</> : (
         <Row>
             {users.map(user => {
                 const logo = `${process.env.PUBLIC_URL}/images/${user.image}`;
-                console.log("logo", logo);
                 return <Col className="text-center" key={user.name}>
-                    <button className="learner-btn" >
+                    <button className="learner-btn" onClick={() => handlePersonClick(user.name)} >
                         <Image src={logo} rounded />
                     </button>
                 </Col>
