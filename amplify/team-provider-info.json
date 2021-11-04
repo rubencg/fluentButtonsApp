@@ -20,6 +20,10 @@
         "buttonsFunction": {
           "deploymentBucketName": "amplify-fluentbuttonsapp-staging-230803-deployment",
           "s3Key": "amplify-builds/buttonsFunction-5141336769612f477478-build.zip"
+        },
+        "buttonClicksFunction": {
+          "deploymentBucketName": "amplify-fluentbuttonsapp-staging-230803-deployment",
+          "s3Key": "amplify-builds/buttonClicksFunction-6663626c644b726f5173-build.zip"
         }
       }
     }

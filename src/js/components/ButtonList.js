@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Image } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { API } from 'aws-amplify';
 
 function getButtonsData() {
@@ -11,7 +11,7 @@ function getButtonsData() {
     return API.get(apiName, path, myInit);
 }
 
-function ButtonList() {
+function ButtonList({onButtonClick}) {
     const [loading, setLoading] = useState(true);
     const [buttons, setButtons] = useState([]);
 
@@ -27,9 +27,9 @@ function ButtonList() {
     return loading ? <>Cargando botones...</> : (
         <Row>
             {buttons.map(button => {
-                console.log("button", button);
                 return <Col className="text-center" key={button.name}>
                     <button
+                    onClick={() => onButtonClick(button.name)}
                         className="btn btn-info btn-lg"
                         key={button.name}>
                         {button.name}

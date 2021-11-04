@@ -19,6 +19,14 @@
             "Name",
             "Arn"
           ]
+        },
+        {
+          "category": "function",
+          "resourceName": "buttonClicksFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
         }
       ]
     }
@@ -29,6 +37,10 @@
       "providerPlugin": "awscloudformation"
     },
     "fluentButtons": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "buttonClicks": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation"
     }
@@ -61,6 +73,25 @@
         {
           "category": "storage",
           "resourceName": "fluentButtons",
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "attributeEnvMap": {
+            "Name": "TABLE_NAME",
+            "Arn": "TABLE_ARN"
+          }
+        }
+      ]
+    },
+    "buttonClicksFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "buttonClicks",
           "attributes": [
             "Name",
             "Arn"

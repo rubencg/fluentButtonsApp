@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import FluentButton from "./FluentButton";
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 const mapStateToProps = state => {
   return { articles: state.articles };
